@@ -2,6 +2,9 @@
 *.xlsm
 *.xls
 *.xlsx
+!templates/
+!templates/*.xlsm
+!templates/*.xlsx
 ~$*
 
 # Generated banking layouts and exports
@@ -9,7 +12,6 @@
 *.csv
 *.dat
 *.layout
-!examples/*.csv
 exports/
 output/
 layouts/

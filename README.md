@@ -80,18 +80,18 @@ El proyecto no requiere variables de entorno actualmente. Se incluye `.env.examp
 
 El flujo general consiste en preparar una hoja con columnas como CLABE, banco receptor, nombre, sucursal, plaza Banxico, importe y estatus. Las macros usan esa informacion para validar datos y organizar salidas por tipo de operacion o banco.
 
-El archivo `examples/sample-input.csv` contiene una estructura de ejemplo con datos ficticios.
-
 ## Estructura del proyecto
 
 ```text
 .
-├── README.md
-├── SECURITY.md
-├── .env.example
-├── .gitignore
-└── examples/
-    └── sample-input.csv
++-- README.md
++-- SECURITY.md
++-- .env.example
++-- .gitignore
++-- docs/
+|   +-- publicar-macros-excel.md
++-- templates/
+    +-- README.md
 ```
 
 ## Capturas
@@ -105,6 +105,24 @@ No se incluyen capturas porque los libros originales contienen informacion sensi
 - Mantener los archivos privados en carpetas ignoradas por Git, como `workbooks/` o `private/`.
 - Usar `.env.example` solo con placeholders si en el futuro se agregan variables de configuracion.
 - Revisar metadatos de autor y propiedades del documento antes de compartir archivos de Excel.
+
+## Publicar el codigo de las macros
+
+Para publicar el codigo de forma revisable en GitHub, exporta los modulos VBA a archivos de texto:
+
+```powershell
+.\scripts\export-vba.ps1
+```
+
+El script crea carpetas dentro de `vba/` con los modulos `.bas`, `.cls` y `.frm` de cada libro `.xlsm` encontrado en la raiz del proyecto.
+
+Antes de hacer commit de esos archivos:
+
+- revisa que no contengan CLABEs, cuentas, nombres reales, rutas privadas o credenciales;
+- confirma que los libros usados como origen ya fueron sanitizados;
+- deja los `.xlsm` ignorados salvo que decidas publicar plantillas ficticias y revisadas.
+
+Si Excel no expone los componentes VBA para exportacion, publica unicamente plantillas sanitizadas dentro de `templates/`. Consulta `docs/publicar-macros-excel.md` para el flujo completo.
 
 ## Pruebas
 
