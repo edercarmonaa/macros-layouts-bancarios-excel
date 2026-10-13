@@ -1,0 +1,56 @@
+# Excel workbooks with macros and local banking data
+*.xlsm
+*.xls
+*.xlsx
+~$*
+
+# Generated banking layouts and exports
+*.txt
+*.csv
+*.dat
+*.layout
+!examples/*.csv
+exports/
+output/
+layouts/
+
+# Local/private copies
+private/
+originales/
+workbooks/
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account.json
+secrets.json
+auth.json
+
+# Local databases, backups and temporary files
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+*.dump
+*.bak
+*.backup
+*.old
+*.copy
+tmp/
+temp/
+cache/
+logs/
+*.log
+
+# Operating system and editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
