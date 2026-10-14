@@ -96,8 +96,10 @@ El flujo general consiste en preparar una hoja con columnas como CLABE, banco re
 
 ## Capturas
 
+### Template 
 ![Template](docs/template.png)
 
+### Codigo VBA 
 ![Macro](docs/macro.png)
 
 
