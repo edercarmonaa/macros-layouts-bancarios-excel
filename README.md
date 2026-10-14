@@ -96,7 +96,10 @@ El flujo general consiste en preparar una hoja con columnas como CLABE, banco re
 
 ## Capturas
 
-No se incluyen capturas porque los libros originales contienen informacion sensible. Pueden agregarse capturas posteriormente usando datos ficticios.
+![Template](docs/template.png)
+
+![Macro](docs/macro.png)
+
 
 ## Seguridad
 
